@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="./styles.css" rel="stylesheet"/>
+</head>
+<body>
+  <main id="main-app">
+    <div id="time-bar"></div>
+    <section id="level-section">
+      <h1>Typing Beacon</h1>
+      <label>Choose Difficulty</label>
+      <select id="level-picker">
+        <option value="30">Easy</option>
+        <option value="20">Medium</option>
+        <option value="6">Hard</option>
+      </select>
+
+      <button id="start-btn">Start</button>
+      <button id="reset-btn">Reset</button>
+    </section>
+
+    <section id="word-section">
+      <h1 id="word-display">
+        Please click the start Button
+      </h1>
+    </section>
+
+    <section id="score-section">
+      <h1>Game Over</h1>
+      <h2>You typed <span id="score-display">80%</span> correctly</h2>
+    </section>
+  </main>
+  <script src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+:root{
+  --time: 30s;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main{
+  background-color: rgb(81, 81, 81);
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#time-bar{
+  height: 15px;
+  width: 100%;
+  background-color: rgb(255, 0, 25);
+  transform: scale(0,1);
+  transform-origin: left;
+}
+
+.begin #time-bar{
+  animation: moveRight var(--time) linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes moveRight {
+  from{
+    transform: scale(0,1);
+  }
+
+  to{
+    transform: scale(1,1);
+  }
+}
+
+#level-section{
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#level-section>h1{
+  margin: 20px 0;
+  font-size: 45px;
+}
+
+#level-section>label{
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#level-picker{
+  height: 20px;
+  width: 150px;
+}
+
+#start-btn, #reset-btn{
+  margin-top: 20px;
+  padding: 5px 25px;
+}
+
+.begin #start-btn{
+  display: none;
+}
+
+#reset-btn{
+  display: none;
+}
+
+.begin #reset-btn{
+  display: block;
+}
+
+#word-section{
+  flex: 1;
+  width: 100%;
+  padding: 20vh 20vw;
+}
+
+.game-over #word-section{
+  display: none;
+}
+
+#word-section>h1{
+  text-align: center;
+  font-size: 35px;
+}
+
+.begin #word-section>h1{
+  font-size: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#score-section{
+  flex: 1;
+  width: 100%;
+  padding: 20vh 20vw;
+  flex-direction: column;
+  align-items: center;
+  display: none;
+}
+
+#score-section > *{
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.game-over #score-section{
+  display: flex;
+}
